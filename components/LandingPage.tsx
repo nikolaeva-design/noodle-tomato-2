@@ -62,10 +62,7 @@ const ctaPanelImage = "/84bdb14fe77afa76bc877ccb4df850bb.jpg";
 
 const partners = [
   { icon: "simple-icons:youtube", label: "YouTube" },
-  { icon: "simple-icons:twitch", label: "Twitch" },
-  { icon: "simple-icons:reddit", label: "Reddit" },
   { icon: "simple-icons:discord", label: "Discord" },
-  { icon: "simple-icons:stripe", label: "Stripe" },
 ] as const;
 
 const featureCards = [
@@ -771,89 +768,109 @@ export function LandingPage() {
         </section>
       </main>
 
-      <footer className="relative z-10 border-t border-white/[0.08] bg-[#05070d]">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/25 to-transparent" aria-hidden />
-        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-16">
-          <div className="grid gap-12 md:grid-cols-[1.15fr_1fr_1fr] md:gap-10 lg:gap-14">
-            <div className="flex flex-col gap-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-sky-200/90">
-                Noodle Tomato
+      <footer className="relative z-10 overflow-hidden border-t border-white/[0.06] bg-[#03050a]">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_85%_45%_at_50%_-10%,rgba(56,189,248,0.11),transparent_55%)]" aria-hidden />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_100%_85%,rgba(14,165,233,0.06),transparent_42%)]" aria-hidden />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 pb-12 pt-14 sm:px-6 sm:pb-14 sm:pt-16 md:pb-16">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-4">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Studio</p>
+              <p className="mt-4 text-lg font-bold uppercase tracking-[0.12em] text-white">Noodle Tomato</p>
+              <p className="mt-3 max-w-xs font-mono text-[11px] leading-relaxed text-zinc-500">
+                v.0 · long-form · 1080p · obsessions welcome
               </p>
-              <p className="max-w-sm text-sm leading-relaxed text-zinc-400">
-                AI-built documentaries for channels that care about retention, not just impressions. One brief in, one
-                polished MP4 out.
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-zinc-400">
+                AI-built long-form docs for YouTube—script through master in one MP4, tuned for watch time.
               </p>
-              <Link href="#cta" className={`w-fit ${slatePrimaryCtaClass}`}>
-                <iconify-icon icon="solar:stars-minimalistic-linear" width="20" height="20" />
-                Start now
+              <Link
+                href="https://www.noodletomato.com/"
+                className="group mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/25 bg-white/[0.07] px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-md transition hover:border-white/40 hover:bg-white/11 sm:w-fit sm:justify-start"
+              >
+                <span>Start Noodle now</span>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#041018] ring-1 ring-white/45 transition group-hover:bg-white/95">
+                  <iconify-icon icon="solar:arrow-right-linear" width="18" height="18" />
+                </span>
               </Link>
             </div>
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-zinc-500">Product</p>
-              <ul className="mt-4 flex flex-col gap-3 text-sm text-zinc-400">
-                <li>
-                  <a href="#create" className="transition hover:text-sky-200">
-                    Niches &amp; slate
-                  </a>
-                </li>
-                <li>
-                  <a href="#pipeline" className="transition hover:text-sky-200">
-                    Pipeline
-                  </a>
-                </li>
-                <li>
-                  <a href="#pricing" className="transition hover:text-sky-200">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a href="#faq" className="transition hover:text-sky-200">
-                    Q&amp;A
-                  </a>
-                </li>
+            <div className="lg:col-span-3">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Product</p>
+              <ul className="mt-4 flex flex-col gap-1">
+                {(
+                  [
+                    ["#create", "Niches & slate"],
+                    ["#pipeline", "Pipeline"],
+                    ["#pricing", "Pricing"],
+                    ["#faq", "Q&A"],
+                  ] as const
+                ).map(([href, label]) => (
+                  <li key={href}>
+                    <a
+                      href={href}
+                      className="group flex items-center gap-2 py-2 text-sm text-zinc-400 transition hover:text-white"
+                    >
+                      <span className="h-px w-0 bg-white/60 transition-all group-hover:w-3" aria-hidden />
+                      {label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-zinc-500">Company</p>
-              <ul className="mt-4 flex flex-col gap-3 text-sm text-zinc-400">
-                <li>
-                  <a href="#proof" className="transition hover:text-sky-200">
-                    Field notes
-                  </a>
-                </li>
-                <li>
-                  <a href="#compare" className="transition hover:text-sky-200">
-                    Long-form vs. Shorts
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="transition hover:text-sky-200">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="transition hover:text-sky-200">
-                    Privacy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="transition hover:text-sky-200">
-                    Terms
-                  </a>
-                </li>
+            <div className="lg:col-span-3">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Company</p>
+              <ul className="mt-4 flex flex-col gap-1">
+                {(
+                  [
+                    ["#proof", "Field notes"],
+                    ["#compare", "Long-form vs. Shorts"],
+                    ["#", "Contact"],
+                    ["#", "Privacy"],
+                    ["#", "Terms"],
+                  ] as const
+                ).map(([href, label]) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      className="group flex items-center gap-2 py-2 text-sm text-zinc-400 transition hover:text-white"
+                    >
+                      <span className="h-px w-0 bg-white/60 transition-all group-hover:w-3" aria-hidden />
+                      {label}
+                    </a>
+                  </li>
+                ))}
               </ul>
+            </div>
+            <div className="lg:col-span-2">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Publish stack</p>
+              <div
+                className="mt-4 flex flex-wrap gap-4 text-zinc-500"
+                role="list"
+                aria-label="Platforms and tools"
+              >
+                {partners.map(({ icon, label }) => (
+                  <div
+                    key={icon}
+                    role="listitem"
+                    className="opacity-75 transition hover:opacity-100"
+                  >
+                    <iconify-icon icon={icon} width="72" height="28" aria-label={label} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 text-center sm:flex-row sm:text-left">
+
+          <div className="relative mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/[0.06] pt-10 sm:flex-row sm:items-center">
             <p className="text-xs text-zinc-600">
-              © {new Date().getFullYear()} Noodle Tomato. Publish tonight, earn on watch time.
+              © {new Date().getFullYear()} Noodle Tomato
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-5 text-xs text-zinc-500 sm:justify-end">
-              <span className="inline-flex items-center gap-1.5">
-                <iconify-icon icon="solar:global-linear" width="16" height="16" className="text-sky-400/80" aria-hidden />
-                noodletomato.com
-              </span>
-            </div>
+            <a
+              href="https://www.noodletomato.com/"
+              className="inline-flex items-center gap-2 text-xs text-zinc-500 transition hover:text-white"
+            >
+              <iconify-icon icon="solar:global-linear" width="16" height="16" className="text-zinc-500" aria-hidden />
+              noodletomato.com
+            </a>
           </div>
         </div>
       </footer>
