@@ -57,6 +57,9 @@ const pipelineSpecPanelBg = "/e1687c16e9573dfceabed22a46c264a8.jpg";
 /** One pipeline column visual (stable; not tied to hero slide index) */
 const pipelineAsideImage = "/abfe5782b6b89fc6a2efc6d802369ff3.jpg";
 
+/** CTA split panel — tech-noir / cyan editorial still */
+const ctaPanelImage = "/84bdb14fe77afa76bc877ccb4df850bb.jpg";
+
 const partners = [
   { icon: "simple-icons:youtube", label: "YouTube" },
   { icon: "simple-icons:twitch", label: "Twitch" },
@@ -674,52 +677,94 @@ export function LandingPage() {
           </div>
         </section>
 
-        {/* CTA — same sky-noir language as Tonight’s slate + pipeline */}
+        {/* CTA — pipeline-style split + hero-style glass actions (no generic “launch/compare” copy) */}
         <section
           id="cta"
           className="relative overflow-hidden scroll-mt-28 border-t border-white/[0.06] bg-[#07090f] py-24 md:py-28"
         >
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_20%,rgba(56,189,248,0.14),transparent_58%)]" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_75%,rgba(14,165,233,0.07),transparent_45%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_18%,rgba(56,189,248,0.16),transparent_58%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_72%,rgba(14,165,233,0.08),transparent_46%)]" />
           <div className="pointer-events-none absolute inset-0">
             <Image
               src={vibe.blueMotion}
               alt=""
               fill
-              className="object-cover object-[center_42%] opacity-[0.14] saturate-[1.05]"
+              className="object-cover object-[center_40%] opacity-[0.11] saturate-[1.06]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#07090f] via-[#07090f]/88 to-[#07090f]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#07090f] via-[#07090f]/92 to-[#07090f]" />
           </div>
           <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="relative overflow-hidden rounded-[28px] border border-white/[0.1] bg-white/[0.04] p-8 shadow-[0_32px_80px_-48px_rgba(0,0,0,0.9)] backdrop-blur-sm sm:p-10 md:p-14">
-              <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-sky-500/20 blur-3xl" aria-hidden />
-              <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-blue-600/15 blur-3xl" aria-hidden />
-              <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-sky-200">
-                  Launch pad
-                </p>
-                <h2 className="text-balance text-2xl font-extrabold uppercase leading-[1.15] tracking-[0.04em] text-white sm:text-3xl lg:text-4xl">
+            <div className="relative overflow-hidden rounded-[32px] border border-white/[0.1] bg-[#07090f]/55 shadow-[0_40px_100px_-52px_rgba(0,0,0,0.95)] backdrop-blur-md md:grid md:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] md:items-stretch">
+              <div className="pointer-events-none absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-sky-500/12 blur-3xl" aria-hidden />
+              <div className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-blue-600/10 blur-3xl" aria-hidden />
+
+              <div className="relative flex flex-col justify-center gap-7 p-8 sm:p-10 md:p-12 lg:p-14">
+                <div className="space-y-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-sky-200">
+                    Final frame
+                  </p>
+                  <div className="h-px w-16 bg-gradient-to-r from-sky-400/80 to-transparent" aria-hidden />
+                </div>
+                <h2 className="text-balance text-2xl font-extrabold uppercase leading-[1.12] tracking-[0.04em] text-white sm:text-3xl lg:text-[2.15rem] lg:leading-[1.1]">
                   Tonight&apos;s topic is{" "}
                   <span className={skyHeadlineAccentClass}>tomorrow&apos;s ad slot.</span>
                 </h2>
-                <p className="max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
-                  Stop stalling on research rabbit holes. Drop a brief, get a watch-time-ready documentary—VO, shots,
-                  captions, score—in one MP4 you can upload tonight.
+                <p className="max-w-lg text-sm leading-relaxed text-zinc-400 sm:text-base">
+                  Same energy as the hero—drop a line of obsession, get VO, scene-matched frames, captions, and score in
+                  one MP4. No edit suite between you and upload night.
                 </p>
-                <div className="flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
+                <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
                   <Link
                     href="https://www.noodletomato.com/"
-                    className={slatePrimaryCtaClass}
+                    className="group inline-flex w-fit items-center gap-4 rounded-full border border-white/25 bg-white/12 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl transition hover:border-white/40 hover:bg-white/16 sm:text-xs"
                   >
-                    <iconify-icon icon="solar:rocket-2-linear" width="20" height="20" />
-                    Launch the app
+                    <span>Start Noodle now</span>
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#041018] shadow-[0_0_22px_-6px_rgba(255,255,255,0.45)] ring-1 ring-white/50 transition group-hover:bg-white/95 group-hover:shadow-[0_0_26px_-4px_rgba(255,255,255,0.55)]">
+                      <iconify-icon icon="solar:arrow-right-linear" width="20" height="20" />
+                    </span>
                   </Link>
-                  <Link href="#pricing" className={slateSecondaryCtaClass}>
-                    <iconify-icon icon="solar:wallet-money-linear" width="20" height="20" className="text-sky-200" />
-                    Compare plans
+                  <Link
+                    href="#create"
+                    className="group inline-flex w-fit items-center gap-4 rounded-full border border-white/18 bg-white/[0.07] px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_6px_28px_rgba(0,0,0,0.3)] backdrop-blur-xl transition hover:border-white/35 hover:bg-white/11 sm:text-xs"
+                  >
+                    <span>See what you can ship</span>
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/55 bg-black/20 shadow-[0_0_16px_-8px_rgba(255,255,255,0.2)] transition group-hover:border-white/75 group-hover:bg-black/30">
+                      <iconify-icon icon="solar:star-linear" width="19" height="19" className="text-white" />
+                    </span>
                   </Link>
                 </div>
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/10 pt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
+                  <span className="inline-flex items-center gap-2 text-zinc-400">
+                    <iconify-icon
+                      icon="solar:shield-check-linear"
+                      width="14"
+                      height="14"
+                      className="text-sky-400"
+                    />
+                    First video guarantee
+                  </span>
+                  <span className="hidden h-3 w-px bg-white/15 sm:block" aria-hidden />
+                  <span>20–90 min · 1080p · YouTube-ready</span>
+                </div>
+              </div>
+
+              <div className="relative min-h-[240px] border-t border-white/[0.08] md:min-h-0 md:border-t-0 md:border-l md:border-white/[0.08]">
+                <Image
+                  src={ctaPanelImage}
+                  alt=""
+                  fill
+                  className="object-cover object-[center_48%_42%] sm:object-[center_45%_40%]"
+                  sizes="(max-width: 768px) 100vw, 42vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07090f] via-[#07090f]/30 to-[#07090f]/55 md:bg-gradient-to-r md:from-[#07090f]/96 md:via-[#07090f]/40 md:to-transparent" />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_85%_75%_at_90%_48%,rgba(34,211,238,0.14),rgba(56,189,248,0.06),transparent_58%)]"
+                  aria-hidden
+                />
+                <p className="absolute bottom-6 left-6 right-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/45 md:bottom-8 md:left-8 md:right-8">
+                  Same brief in · One MP4 out
+                </p>
               </div>
             </div>
           </div>

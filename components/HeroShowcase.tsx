@@ -107,31 +107,21 @@ export function HeroShowcase({ slides }: HeroShowcaseProps) {
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
-              href="#cta"
-              className="group inline-flex w-fit items-center gap-4 rounded-full border border-white/25 bg-white/12 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-xl transition hover:border-white/35 hover:bg-white/16 sm:text-xs"
+              href="https://www.noodletomato.com/"
+              className="group inline-flex w-fit items-center gap-4 rounded-full border border-white/25 bg-white/12 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-xl transition hover:border-white/40 hover:bg-white/16 sm:text-xs"
             >
-              <span>Watch the reel</span>
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black/25 ring-1 ring-white/30 transition group-hover:bg-black/35">
-                <iconify-icon
-                  icon="solar:play-bold"
-                  width="20"
-                  height="20"
-                  className="text-white"
-                />
+              <span>Start Noodle now</span>
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#041018] shadow-[0_0_22px_-6px_rgba(255,255,255,0.45)] ring-1 ring-white/50 transition group-hover:bg-white/95 group-hover:shadow-[0_0_26px_-4px_rgba(255,255,255,0.55)]">
+                <iconify-icon icon="solar:arrow-right-linear" width="20" height="20" />
               </span>
             </Link>
             <Link
               href="#create"
-              className="group inline-flex w-fit items-center gap-4 rounded-full border border-white/18 bg-white/[0.07] px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_6px_28px_rgba(0,0,0,0.28)] backdrop-blur-xl transition hover:border-white/28 hover:bg-white/11 sm:text-xs"
+              className="group inline-flex w-fit items-center gap-4 rounded-full border border-white/18 bg-white/[0.07] px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_6px_28px_rgba(0,0,0,0.28)] backdrop-blur-xl transition hover:border-white/35 hover:bg-white/11 sm:text-xs"
             >
               <span>See what you can ship</span>
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black/20 ring-1 ring-white/25 transition group-hover:bg-black/30">
-                <iconify-icon
-                  icon="solar:play-bold"
-                  width="18"
-                  height="18"
-                  className="text-white"
-                />
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/55 bg-black/20 shadow-[0_0_16px_-8px_rgba(255,255,255,0.2)] transition group-hover:border-white/75 group-hover:bg-black/30">
+                <iconify-icon icon="solar:star-linear" width="19" height="19" className="text-white" />
               </span>
             </Link>
           </div>
