@@ -22,6 +22,8 @@ const vibe = {
 /** Hero slides — ChatGPT exports: spaces/Cyrillic; encode for URL */
 const heroSlide1Image =
   "/" + encodeURIComponent("ChatGPT Image 27 апр. 2026 г., 22_49_45.png");
+const heroSlide2Image =
+  "/" + encodeURIComponent("ChatGPT Image 27 апр. 2026 г., 23_16_17.png");
 const heroSlide3Image =
   "/" + encodeURIComponent("ChatGPT Image 27 апр. 2026 г., 22_51_48.png");
 
@@ -40,11 +42,12 @@ const heroSlides = [
     headline: "One brief in.\nOne film out.",
     subline:
       "The same system handles scripting, scene-matched imagery, captions, and score from a single brief. Download one polished file—no edit suite required before upload.",
-    image: "/abfe5782b6b89fc6a2efc6d802369ff3.jpg",
+    image: heroSlide2Image,
+    imageClassName: "object-[center_45%_42%] sm:object-[center_48%_40%]",
   },
   {
     kicker: "Built for RPM",
-    headline: "Long formats earn.\nLong after premiere.",
+    headline: "Long video pays.\nLong past launch.",
     subline:
       "Prioritize retention and RPM on long videos instead of chasing one-day Shorts spikes. Build a catalog of films that keep earning well after release week.",
     image: heroSlide3Image,
