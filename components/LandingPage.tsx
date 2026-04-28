@@ -65,7 +65,10 @@ const ctaPanelImage = "/84bdb14fe77afa76bc877ccb4df850bb.jpg";
 
 const partners = [
   { icon: "simple-icons:youtube", label: "YouTube" },
+  { icon: "simple-icons:twitch", label: "Twitch" },
+  { icon: "simple-icons:reddit", label: "Reddit" },
   { icon: "simple-icons:discord", label: "Discord" },
+  { icon: "simple-icons:stripe", label: "Stripe" },
 ] as const;
 
 const featureCards = [
